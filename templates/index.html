@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ company }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="page">
+    <header class="banner">
+        <h1>{{ company }}</h1>
+        <p>Наш онлайн-консультант ответит на вопросы о курсе.</p>
+        <button class="btn" type="button" data-ask="Как записаться на курс?">Записаться</button>
+    </header>
+
+    <section class="chat">
+        <div class="quick">
+            <button type="button" data-ask="Какая программа курса?">Какая программа?</button>
+            <button type="button" data-ask="Кто преподаёт?">Кто преподаёт?</button>
+            <button type="button" data-ask="Сколько стоит обучение?">Сколько стоит?</button>
+            <button type="button" data-ask="Какие темы входят в обучение?">Какие темы?</button>
+            <button type="button" data-ask="Как построено обучение?">Как проходит обучение</button>
+            <button type="button" data-ask="Есть ли пробный урок?">Пробный урок</button>
+            <button type="button" data-ask="Как записаться на курс?">Записаться</button>
+        </div>
+
+        <div id="messages">
+            <div class="msg bot">{{ greeting }}</div>
+        </div>
+
+        <form id="chat-form">
+            <input id="message" maxlength="1000" autocomplete="off"
+                   placeholder="Напишите вопрос, например «сколько стоит?»">
+            <button class="btn" type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>Сложный вопрос? Напишите «записаться» и укажите телефон.</footer>
+</main>
+<script src="/static/chat.js"></script>
+</body>
+</html>
